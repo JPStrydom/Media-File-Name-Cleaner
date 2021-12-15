@@ -33,7 +33,7 @@ const IDENTIFIER_REGEX = /s\d{2}e\d{2}/i;
 const QUALITY_REGEX = /\d+[p|k]/i;
 const EXTENSION_REGEX = /\.[^.]*$/i;
 
-const getCurrentDir = fileName => path.join(__dirname, './', fileName || '');
+const getCurrentDir = fileName => path.join(__dirname, '../', fileName || '');
 
 const isVideoFileName = fileName =>
   VIDEO_FILE_EXTENSIONS.some(extension => fileName.toLowerCase().endsWith(extension));
@@ -89,10 +89,10 @@ const renameFile = fileName => {
 };
 
 const renameFiles = () => {
-  console.log('\nStarting series files renaming\n');
+  console.log('\nStarting media files renaming\n');
   const fileNames = getVideoFileNames();
   fileNames.forEach(renameFile);
-  console.log('\nDone renaming all series\n');
+  console.log('\nDone renaming all media files\n');
 };
 
 renameFiles();
