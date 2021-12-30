@@ -4,8 +4,8 @@
 
 This NodeJS script cleans up the names of downloaded movie and series files. It extracts the following information from files:
 - `name`
-- `seriesIndex` (_if available_) - (_e.g. S02E08_)
-- `quality` (_if available_) - (_e.g. 1080p_)
+- `seriesIndex` [_if available_] (_e.g. S02E08_)
+- `quality` (_e.g. 1080p or 1920x816_)
 - `fileExtention`
 
 It then uses this information to rename movie or episode files with a cleaner format (_i.e. `{name} {seriesIndex} {quality}.{extention}`_).
@@ -23,6 +23,7 @@ To run this script:
     └── memes.and.queens.s04e20.480p.WEB-DL.x264-mSD.mkv
     └── the.one.and.the.other.S02E14.2160p.HEVC.x265-MeGusta.mp4   
     └── survivor.s09e12.4k.HDTV.x264-SYNCOPY.MKV
+    └── 2021.F9.The.Fast.Saga.1920x804.BDRip.x264.TrueHD-Atmos.mkv
     └── Media-File-Name-Cleaner // Repo folder goes here
         └── README.MD
         └── index.js
@@ -31,6 +32,6 @@ To run this script:
 3. Run the following command:
     - Windows: `node .\Media-File-Name-Cleaner\`
     - Unix: `node ./Media-File-Name-Cleaner/`
-    -
+   
 Here is an example of the script's output:
 ![series-file-name-cleaner](https://user-images.githubusercontent.com/25905330/146195178-646ab5a5-c057-4898-b691-d8475b6c17dd.png)

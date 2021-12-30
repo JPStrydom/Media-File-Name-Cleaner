@@ -28,9 +28,9 @@ const MULTI_SPACE_REGEX = /\s{2,}/g;
 const START_CASE_REGEX = /\b\w/g;
 
 const NAME_PRE_IDENTIFIER_REGEX = /^.*(?=[^s]s\d{2}e\d{2})/i;
-const NAME_PRE_QUALITY_REGEX = /^.*(?=[^\d]\d+[p|k])/i;
+const NAME_PRE_QUALITY_REGEX = /^.*((?=[^\d]\d+[p|k])|(?=[^s]\d{3,4}x\d{3,4}))/i;
 const IDENTIFIER_REGEX = /s\d{2}e\d{2}/i;
-const QUALITY_REGEX = /\d+[p|k]/i;
+const QUALITY_REGEX = /\d+[p|k]|\d{3,4}x\d{3,4}/i;
 const EXTENSION_REGEX = /\.[^.]*$/i;
 
 const getCurrentDir = fileName => path.join(__dirname, '../', fileName || '');
